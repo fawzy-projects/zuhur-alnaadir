@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 140 20% 97%;
+    --foreground: 150 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 15%;
+
+    --primary: 142 71% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 40% 92%;
+    --secondary-foreground: 142 71% 25%;
+
+    --muted: 140 20% 94%;
+    --muted-foreground: 150 15% 45%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 142 71% 35%;
+
+    --radius: 1rem;
+
+    /* Custom nursery colors */
+    --nursery-green: 142 71% 35%;
+    --nursery-green-light: 142 60% 45%;
+    --nursery-green-dark: 142 80% 25%;
+    --nursery-leaf: 158 64% 40%;
+    --nursery-earth: 30 40% 35%;
+    --nursery-sand: 38 35% 92%;
+
+    /* Card icon backgrounds */
+    /* Card icon backgrounds */
+    --card-map: 142 71% 35%;
+    --card-whatsapp: 142 70% 45%;
+    --card-phone: 199 89% 48%;
+    --card-plants: 158 64% 40%;
+    --card-snapchat: 54 97% 62%;
+    --card-instagram: 318 72% 55%;
+    --card-facebook: 221 83% 53%;
+    --card-youtube: 0 72% 55%;
+    --card-email: 210 15% 40%;
+    --card-hours: 43 96% 56%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 30% 8%;
+    --foreground: 140 20% 95%;
+
+    --card: 150 25% 12%;
+    --card-foreground: 140 20% 95%;
+
+    --popover: 150 25% 12%;
+    --popover-foreground: 140 20% 95%;
+
+    --primary: 142 60% 45%;
+    --primary-foreground: 150 30% 8%;
+
+    --secondary: 150 25% 18%;
+    --secondary-foreground: 140 20% 95%;
+
+    --muted: 150 25% 18%;
+    --muted-foreground: 140 15% 60%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 25% 20%;
+    --input: 150 25% 20%;
+    --ring: 142 60% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Tajawal', sans-serif;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 4px 20px -4px hsl(var(--foreground) / 0.08),
+                0 2px 8px -2px hsl(var(--foreground) / 0.04);
+  }
+
+  .card-shadow-hover {
+    box-shadow: 0 8px 30px -4px hsl(var(--foreground) / 0.12),
+                0 4px 12px -2px hsl(var(--foreground) / 0.06);
+  }
+
+  .profile-shadow {
+    box-shadow: 0 4px 20px -4px hsl(var(--primary) / 0.3);
+  }
+}
