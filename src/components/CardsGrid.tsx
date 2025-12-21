@@ -39,7 +39,7 @@ const CardsGrid = () => {
       buttonText: "تواصل الآن",
       href: "https://wa.me/966559859852?text=مرحبا،%20أرغب%20في%20الاستفسار%20عن%20منتجاتكم%20والأسعار.",
     },
-    {
+    /*{
       icon: <Ghost className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-snapchat",
       title: "سناب شات",
@@ -70,7 +70,7 @@ const CardsGrid = () => {
       description: "شاهد فيديوهات المنتجات والمراجعات والعروض.",
       buttonText: "افتح يوتيوب",
       href: "https://www.youtube.com/@YOUR_CHANNEL",
-    },
+    },*/
     {
       icon: <Mail className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-email",
