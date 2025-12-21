@@ -28,7 +28,7 @@ const plants: Plant[] = [
     name: "نخيل واشنطونيا",
     type: "أشجار",
     image:
-      "https://tse3.mm.bing.net/th/id/OIP.sS0eB5ueAHwavE-AUN34sgHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://images.pexels.com/photos/1584651/pexels-photo-1584651.jpeg?auto=compress&cs=tinysrgb&w=200",
   },
   {
     name: "فيكس",
@@ -46,13 +46,13 @@ const plants: Plant[] = [
     name: "لافندر",
     type: "عطريات",
     image:
-      "https://cdn.alweb.com/thumbs/woroodoazhar/article/fit710x532/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D9%88%D8%B1%D9%88%D8%AF-%D8%A7%D9%84%D9%84%D8%A7%D9%81%D9%86%D8%AF%D8%B1.jpg",
+      "https://images.pexels.com/photos/60597/lavender-flowers-flowers-purple-60597.jpeg?auto=compress&cs=tinysrgb&w=200",
   },
   {
     name: "نعناع",
     type: "عطريات",
     image:
-      "https://tse1.mm.bing.net/th/id/OIP.0-poXb_u6ubDMZLiXtZMuwHaFM?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://images.pexels.com/photos/161556/peppermint-mint-plant-aromatic-161556.jpeg?auto=compress&cs=tinysrgb&w=200",
   },
   {
     name: "ريحان",

@@ -1,7 +1,7 @@
 # Rare Bloom Hub
 
 Landing page for **مشتل زهور النادر** في الطائف، مبنية باستخدام:
-
+1324
 - React + TypeScript
 - Vite
 - Tailwind CSS

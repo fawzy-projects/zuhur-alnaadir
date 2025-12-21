@@ -9,13 +9,13 @@ const WorkingHoursModal = ({ isOpen, onClose }: WorkingHoursModalProps) => {
   if (!isOpen) return null;
 
   const days = [
-    "الأحد",
-    "الإثنين",
-    "الثلاثاء",
-    "الأربعاء",
-    "الخميس",
-    "الجمعة",
-    "السبت",
+    { day: "الأحد", time: "٩:٣٠ص–١٢:٠٠ص" },
+    { day: "الاثنين", time: "٩:٣٠ص–١٢:٠٠ص" },
+    { day: "الثلاثاء", time: "٩:٣٠ص–١٢:٠٠ص" },
+    { day: "الأربعاء", time: "٩:٣٠ص–١٢:٠٠ص" },
+    { day: "الخميس", time: "٩:٣٠ص–١٢:٠٠ص" },
+    { day: "الجمعة", time: "١:٠٠م–١٢:٠٠ص" },
+    { day: "السبت", time: "٩:٣٠ص–١٢:٠٠ص" },
   ];
 
   return (
@@ -35,7 +35,7 @@ const WorkingHoursModal = ({ isOpen, onClose }: WorkingHoursModalProps) => {
               <div className="text-right">
                 <h2 className="text-lg font-bold font-tajawal">مواعيد العمل</h2>
                 <p className="text-xs opacity-90 font-tajawal">
-                  أوقات استقبال العملاء في المشتل
+                  مواعيد العمل واستقبال العملاء
                 </p>
               </div>
             </div>
@@ -57,20 +57,19 @@ const WorkingHoursModal = ({ isOpen, onClose }: WorkingHoursModalProps) => {
             </p>
 
             <div className="space-y-2 text-sm font-tajawal">
-              {days.map((day) => (
+              {days.map(({ day, time }) => (
                 <div
                   key={day}
                   className="flex items-center justify-between rounded-xl bg-card px-4 py-2 shadow-sm border border-border/60"
                 >
                   <span className="font-semibold text-foreground">{day}</span>
-                  <span className="text-muted-foreground">8:00 ص - 10:00 م</span>
+                  <span className="text-muted-foreground">{time}</span>
                 </div>
               ))}
             </div>
 
             <p className="text-xs text-muted-foreground leading-relaxed font-tajawal">
-              قد تتغير المواعيد في المواسم أو الإجازات الرسمية. يُفضّل التواصل
-              معنا عبر واتساب للتأكد من المواعيد في نفس اليوم.
+              قد تتغير المواعيد في المواسم أو الإجازات الرسمية. يُفضّل التواصل معنا عبر واتساب للتأكد من المواعيد.د في نفس اليوم.
             </p>
           </div>
 
