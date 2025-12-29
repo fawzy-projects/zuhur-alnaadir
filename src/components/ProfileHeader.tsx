@@ -4,14 +4,14 @@ const ProfileHeader = () => {
       {/* Logo as full circle image */}
       <div className="relative mx-auto w-32 h-32 mb-5">
         <img
-          src="/logo.webp"
-          alt="BAZAD"
+          src="/logo.png"
+          alt="BAZAD GROUP"
           className="w-full h-full rounded-full object-contain shadow-md bg-white"
         />
       </div>
 
       <h1 className="text-2xl font-bold text-foreground mb-2 font-tajawal">
-        BAZAD
+        BAZAD GROUP
       </h1>
 
       <p className="text-muted-foreground text-base font-tajawal max-w-2xl mx-auto leading-relaxed">
