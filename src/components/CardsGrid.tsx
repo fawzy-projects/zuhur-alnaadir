@@ -1,27 +1,49 @@
 import { useState } from "react";
-import { MapPin, MessageCircle, Phone, Leaf, Instagram, Facebook, Youtube, Mail, Ghost, Clock } from "lucide-react";
+import {
+  MapPin,
+  MessageCircle,
+  Phone,
+  Briefcase,
+  Instagram,
+  Facebook,
+  Youtube,
+  Ghost,
+  Clock,
+  Globe,
+} from "lucide-react";
 import LinkCard from "./LinkCard";
-import PlantsList from "./PlantsList";
+import ServicesList from "./ServicesList";
 import WorkingHoursModal from "./WorkingHoursModal";
 
 const CardsGrid = () => {
-  const [showPlants, setShowPlants] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   const [showHours, setShowHours] = useState(false);
+
+  const phoneNumber = "+201503737049";
+  const phoneNumberForWa = "201503737049";
 
   const cards = [
     {
       icon: <MapPin className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-map",
       title: "الموقع على الخريطة",
-      description: "موقعنا في الطائف – خط الجنوب – حي أم السباع.",
+      description: "5R2 Egypt Medical Center, التاسعة، مدينة نصر، محافظة القاهرة",
       buttonText: "اضغط للانتقال",
-      href: "https://maps.app.goo.gl/kcqobTEdhHfscS7c6",
+      href: "https://maps.app.goo.gl/raKyZSVEzLYShQFz7",
+    },
+    {
+      icon: <Globe className="w-8 h-8" strokeWidth={1.6} />,
+      iconBgColor: "bg-card-icon-website",
+      title: "الموقع الإلكتروني",
+      description: "تعرف على خدماتنا وتواصل معنا عبر الموقع الرسمي.",
+      buttonText: "فتح الموقع",
+      href: "https://bazadgroup.com/",
     },
     {
       icon: <Clock className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-hours",
       title: "مواعيد العمل",
-      description: "نعمل طوال أيام الأسبوع من 8:00 صباحًا حتى 10:00 مساءً.",
+      description: "مواعيدنا الرسمية — تواصل معنا للتأكيد حسب اليوم.",
       buttonText: "شاهد المواعيد",
       onClick: () => setShowHours(true),
     },
@@ -29,18 +51,30 @@ const CardsGrid = () => {
       icon: <Phone className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-phone",
       title: "اتصال مباشر",
-      description: "نخدمكم يوميًا ونوفر أفضل الشتلات والنباتات.",
+      description: "اتصل بنا الآن لمناقشة احتياجات شركتك وخططك.",
       buttonText: "اتصل الآن",
-      href: "tel:0546841412",
+      href: `tel:${phoneNumber}`,
     },
     {
       icon: <MessageCircle className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-whatsapp",
       title: "تواصل واتساب",
-      description: "للاستفسار أو الطلب، راسلنا مباشرة عبر واتساب.",
+      description: "للاستفسار أو حجز استشارة، راسلنا مباشرة عبر واتساب.",
       buttonText: "تواصل الآن",
-      href: "https://wa.me/966546841412?text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20النباتات%20المتوفرة.",
+      href: `https://wa.me/${phoneNumberForWa}?text=${encodeURIComponent(
+        "السلام عليكم، حابب/ة أعرف تفاصيل خدمات BAZAD وحجز استشارة."
+      )}`,
     },
+    {
+      icon: <Briefcase className="w-8 h-8" strokeWidth={1.6} />,
+      iconBgColor: "bg-card-icon-services",
+      title: "قائمة الخدمات",
+      description: "استعرض خدماتنا الأساسية في تأسيس ونمو الأعمال.",
+      buttonText: "عرض الخدمات",
+      onClick: () => setShowServices(true),
+    },
+
+    // ✅ اترك كاردات السوشيال ميديا كما هي
     {
       icon: <Ghost className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-snapchat",
@@ -53,7 +87,7 @@ const CardsGrid = () => {
       icon: <Instagram className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-instagram",
       title: "إنستجرام",
-      description: "أحدث الصور والفيديوهات من المشتل.",
+      description: "أحدث الصور والفيديوهات.",
       buttonText: "افتح إنستجرام",
       href: "https://www.instagram.com/YOUR_INSTAGRAM_USERNAME",
     },
@@ -69,25 +103,9 @@ const CardsGrid = () => {
       icon: <Youtube className="w-8 h-8" strokeWidth={1.6} />,
       iconBgColor: "bg-card-icon-youtube",
       title: "يوتيوب",
-      description: "شاهد الفيديوهات والجولات في المشتل.",
+      description: "شاهد الفيديوهات واللقاءات.",
       buttonText: "افتح يوتيوب",
       href: "https://www.youtube.com/@YOUR_CHANNEL",
-    },
-    {
-      icon: <Mail className="w-8 h-8" strokeWidth={1.6} />,
-      iconBgColor: "bg-card-icon-email",
-      title: "البريد الإلكتروني",
-      description: "راسلنا لأي استفسار أو عروض خاصة.",
-      buttonText: "إرسال بريد",
-      href: "mailto:yourmail@example.com",
-    },
-    {
-      icon: <Leaf className="w-8 h-8" strokeWidth={1.6} />,
-      iconBgColor: "bg-card-icon-plants",
-      title: "قائمة النباتات",
-      description: "استعرض أشهر النباتات المتوفرة لدينا.",
-      buttonText: "عرض القائمة",
-      onClick: () => setShowPlants(true),
     },
   ];
 
@@ -97,17 +115,13 @@ const CardsGrid = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cards.map((card, index) => (
-              <LinkCard
-                key={card.title}
-                {...card}
-                delay={100 + index * 100}
-              />
+              <LinkCard key={card.title} {...card} delay={100 + index * 100} />
             ))}
           </div>
         </div>
       </section>
 
-      <PlantsList isOpen={showPlants} onClose={() => setShowPlants(false)} />
+      <ServicesList isOpen={showServices} onClose={() => setShowServices(false)} />
       <WorkingHoursModal isOpen={showHours} onClose={() => setShowHours(false)} />
     </>
   );

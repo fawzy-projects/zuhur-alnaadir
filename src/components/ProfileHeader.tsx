@@ -4,19 +4,23 @@ const ProfileHeader = () => {
       {/* Logo as full circle image */}
       <div className="relative mx-auto w-32 h-32 mb-5">
         <img
-          src="/logo.png"
-          alt="مشتل زهور النادر"
+          src="/logo.webp"
+          alt="BAZAD"
           className="w-full h-full rounded-full object-contain shadow-md bg-white"
         />
       </div>
 
       <h1 className="text-2xl font-bold text-foreground mb-2 font-tajawal">
-        مشتل زهور النادر
+        BAZAD
       </h1>
 
-      <p className="text-muted-foreground text-base font-tajawal max-w-xl mx-auto">
-        نباتات داخلية وخارجية، شتلات، تنسيق حدائق وتركيب شبكات ري – نخدمكم في
-        الطائف وما حولها بأعلى جودة وخبرة في عالم النباتات 🌿
+      <p className="text-muted-foreground text-base font-tajawal max-w-2xl mx-auto leading-relaxed">
+        <span className="font-semibold text-foreground">نبني شركتك… ونقود نجاحك</span>
+        <span className="mx-2 text-muted-foreground">|</span>
+        <span className="font-semibold">Building Businesses. Shaping Success.</span>
+        <br />
+        شركة حلول أعمال واستشارات شاملة — تأسيس شركات، تخطيط بيزنس، تسويق، حوكمة، تسجيل علامات تجارية، ترجمة وتدقيق لغوي،
+        استشارات قانونية، وحلول برمجيات الذكاء الاصطناعي.
       </p>
     </header>
   );

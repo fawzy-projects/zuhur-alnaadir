@@ -1,61 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
-
 @layer base {
   :root {
+    /* ✅ Keep background as-is */
     --background: 140 20% 97%;
-    --foreground: 150 30% 15%;
+
+    /* Brand-aligned foreground */
+    --foreground: 222 45% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 150 30% 15%;
+    --card-foreground: 222 45% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 150 30% 15%;
+    --popover-foreground: 222 45% 13%;
 
-    --primary: 142 71% 35%;
+    /* Brand primary (navy) + accent (gold) */
+    --primary: 222 67% 16%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 40% 92%;
-    --secondary-foreground: 142 71% 25%;
+    --secondary: 222 25% 93%;
+    --secondary-foreground: 222 67% 18%;
 
-    --muted: 140 20% 94%;
-    --muted-foreground: 150 15% 45%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 222 10% 45%;
 
-    --accent: 38 92% 50%;
+    --accent: 36 85% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 140 20% 88%;
-    --input: 140 20% 88%;
-    --ring: 142 71% 35%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 222 67% 16%;
 
     --radius: 1rem;
 
-    /* Custom nursery colors */
-    --nursery-green: 142 71% 35%;
-    --nursery-green-light: 142 60% 45%;
-    --nursery-green-dark: 142 80% 25%;
-    --nursery-leaf: 158 64% 40%;
+    /* Custom brand palette (re-using existing token names) */
+    --nursery-green: 222 67% 16%;
+    --nursery-green-light: 222 55% 22%;
+    --nursery-green-dark: 222 70% 12%;
+    --nursery-leaf: 36 85% 50%;
     --nursery-earth: 30 40% 35%;
     --nursery-sand: 38 35% 92%;
 
     /* Card icon backgrounds */
-    /* Card icon backgrounds */
     --card-map: 142 71% 35%;
-    --card-whatsapp: 142 70% 45%;
+    --card-website: 36 85% 50%;
+    --card-hours: 36 85% 50%;
     --card-phone: 199 89% 48%;
-    --card-plants: 158 64% 40%;
+    --card-whatsapp: 142 70% 45%;
+    --card-services: 43 96% 56%;
+    --card-plants: 36 85% 50%;
+
+    /* Social cards (kept as-is) */
     --card-snapchat: 54 97% 62%;
     --card-instagram: 318 72% 55%;
     --card-facebook: 221 83% 53%;
     --card-youtube: 0 72% 55%;
     --card-email: 210 15% 40%;
-    --card-hours: 43 96% 56%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
